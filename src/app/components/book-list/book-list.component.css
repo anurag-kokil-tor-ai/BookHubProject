@@ -1,0 +1,22 @@
+.icon-button {
+    background-color: transparent;
+    border: none;
+    transition: background-color 0.3s ease;
+    padding: 6px;
+    border-radius: 4px;
+}
+
+.icon-view:hover {
+    background-color: #d0ebff;
+    /* light blue */
+}
+
+.icon-edit:hover {
+    background-color: #d3f9d8;
+    /* light green */
+}
+
+.icon-delete:hover {
+    background-color: #ffe3e3;
+    /* light red */
+}
