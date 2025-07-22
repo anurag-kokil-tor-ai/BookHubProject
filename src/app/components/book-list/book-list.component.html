@@ -15,7 +15,7 @@
                 <td>{{ book.author }}</td>
                 <td>{{ book.price | currency:'INR' }}</td>
                 <td>
-                    <button class="icon-button icon-view me-2" title="View"><i class="bi bi-eye"></i></button>
+                    <button class="icon-button icon-view me-2" [routerLink]="['/books', book.id]" title="View"><i class="bi bi-eye"></i></button>
                     <button class="icon-button icon-edit me-2" title="Edit"><i class="bi bi-pencil"></i></button>
                     <button class="icon-button icon-delete" title="Delete"><i class="bi bi-trash"></i></button>
                 </td>

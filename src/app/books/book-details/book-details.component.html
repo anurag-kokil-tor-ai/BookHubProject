@@ -1,0 +1,23 @@
+<div class="container mt-4">
+  <div class="card border-0 shadow-lg rounded-4 p-4 bg-light">
+    <div class="card-body">
+      <h2 class="card-title text-dark fw-bold mb-4 border-bottom pb-2">
+        {{ book?.title }}
+      </h2>
+
+      <div class="mb-3">
+        <span class="badge bg-info text-dark fs-6 me-2">Author</span>
+        <span class="fs-5 text-muted">{{ book?.author }}</span>
+      </div>
+
+      <div class="mb-4">
+        <span class="badge bg-success fs-6 me-2">Price</span>
+        <span class="fs-5 fw-semibold text-success">{{ book?.price | currency:'INR' }}</span>
+      </div>
+
+      <a class="btn btn-outline-primary px-4 py-2 rounded-pill" routerLink="/books">
+        <i class="bi bi-arrow-left-circle me-2"></i> Back to List
+      </a>
+    </div>
+  </div>
+</div>
