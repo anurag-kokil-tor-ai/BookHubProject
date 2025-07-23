@@ -7,13 +7,17 @@ import { BookListComponent } from './components/book-list/book-list.component';
 import { BookDetailsComponent } from './books/book-details/book-details.component';
 import { BookCreateComponent } from './books/book-create/book-create.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BookEditComponent } from './books/book-edit/book-edit.component';
+import { BookDeleteComponent } from './books/book-delete/book-delete.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BookListComponent,
     BookDetailsComponent,
-    BookCreateComponent
+    BookCreateComponent,
+    BookEditComponent,
+    BookDeleteComponent
   ],
   imports: [
     BrowserModule,
