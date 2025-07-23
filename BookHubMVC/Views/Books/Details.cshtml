@@ -1,0 +1,24 @@
+﻿@model BookHubMvc.Models.BookReadDto
+
+@{
+    ViewData["Title"] = "Book Details";
+}
+
+<h2>Book Details</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Title</th>
+        <td>@Model.Title</td>
+    </tr>
+    <tr>
+        <th>Author</th>
+        <td>@Model.Author</td>
+    </tr>
+    <tr>
+        <th>Price</th>
+        <td>@Model.Price</td>
+    </tr>
+</table>
+
+<a asp-action="Index" class="btn btn-secondary">Back to List</a>

@@ -1,0 +1,9 @@
+﻿/* style.css */
+.card-title {
+    font-weight: bold;
+}
+
+.card-subtitle {
+    font-size: 0.9rem;
+    color: #666;
+}
