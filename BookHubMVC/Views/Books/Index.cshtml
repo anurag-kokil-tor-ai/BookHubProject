@@ -1,0 +1,46 @@
+﻿@model List<BookHubMvc.Models.BookReadDto>
+
+@{
+    ViewData["Title"] = "Book List";
+}
+
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h2 class="my-4">Book List</h2>
+    <a asp-action="Create" class="btn btn-success btn-lg rounded-pill px-4">
+        <i class="bi bi-plus-circle"></i> Add New Book
+    </a>
+</div>
+
+
+<table class="table table-hover table-bordered align-middle shadow-sm">
+    <thead class="table-dark">
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Price (₹)</th>
+            <th style="width: 150px;">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var book in Model)
+        {
+            <tr>
+                <td>@book.Title</td>
+                <td>@book.Author</td>
+                <td>@book.Price</td>
+                <td class="text-center">
+                    <a asp-action="Details" asp-route-id="@book.Id" class="btn btn-sm btn-info me-1" title="View">
+                        <i class="bi bi-eye"></i>
+                    </a>
+                    <a asp-action="Edit" asp-route-id="@book.Id" class="btn btn-sm btn-warning me-1" title="Edit">
+                        <i class="bi bi-pencil-square"></i>
+                    </a>
+                    <a asp-action="Delete" asp-route-id="@book.Id" class="btn btn-sm btn-danger" title="Delete">
+                        <i class="bi bi-trash"></i>
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
