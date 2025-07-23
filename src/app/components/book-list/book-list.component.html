@@ -1,5 +1,12 @@
 <div class="container mt-4">
     <h2 class="mb-4">Book Inventory</h2>
+
+<div class="container mb-3 text-end">
+  <a class="btn btn-primary mb-3" routerLink="/books/create">
+    <i class="bi bi-plus-circle me-1"></i> Add New Book
+  </a>
+</div>
+
     <table class="table table-hover table-bordered">
         <thead class="table-dark">
             <tr>
@@ -15,7 +22,8 @@
                 <td>{{ book.author }}</td>
                 <td>{{ book.price | currency:'INR' }}</td>
                 <td>
-                    <button class="icon-button icon-view me-2" [routerLink]="['/books', book.id]" title="View"><i class="bi bi-eye"></i></button>
+                    <button class="icon-button icon-view me-2" [routerLink]="['/books', book.id]" title="View"><i
+                            class="bi bi-eye"></i></button>
                     <button class="icon-button icon-edit me-2" title="Edit"><i class="bi bi-pencil"></i></button>
                     <button class="icon-button icon-delete" title="Delete"><i class="bi bi-trash"></i></button>
                 </td>

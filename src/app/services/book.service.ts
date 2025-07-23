@@ -7,10 +7,6 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class BookService {
-  getBookById(id: number): Observable<Book> {
-    return this.http.get<Book>(`${this.apiUrl}/${id}`);
-  }
-
   private apiUrl = environment.apiBaseUrl;
 
   constructor(private http: HttpClient) { }
@@ -18,4 +14,14 @@ export class BookService {
   getAllBooks(): Observable<Book[]> {
     return this.http.get<Book[]>(this.apiUrl);
   }
+
+  getBookById(id: number): Observable<Book> {
+    return this.http.get<Book>(`${this.apiUrl}/${id}`);
+  }
+
+  createBook(book: Book): Observable<Book> {
+    return this.http.post<Book>(this.apiUrl, book);
+  }
+
+  
 }
